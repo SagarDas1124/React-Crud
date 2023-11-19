@@ -12,7 +12,7 @@ export const Create = () => {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try{
-        await axios.post("https://crud-express-bend.onrender.com/api/v1/employee",{ename,email,emobile})
+        await axios.post("http://localhost:5000/api/v1/employee",{ename,email,emobile})
         history("/")
     }catch(error){
       console.log(error.message);
